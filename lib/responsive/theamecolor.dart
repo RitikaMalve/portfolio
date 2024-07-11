@@ -1,25 +1,42 @@
 // Define custom colors for light mode
 
 import 'package:flutter/material.dart';
+import 'package:portpolio/main.dart';
 
 class Theamecolor {
+ 
+  final darkTheme = ThemeData(
+    //opposite
+    primaryColor: maincolor,
+    primaryColorLight: Colors.white,
+   //samebothside
+    primaryColorDark: Colors.white,
+    secondaryHeaderColor: maincolor,
+    //themchanger
+    canvasColor: Colors.black,
+    //background color
+    focusColor: maincolor,
+      hintColor: Colors.white,
+    // splashColor: Color(0xFFF5E5EE)
+  );
+   // ////////////////////////Define custom colors for light mode///////////////////
   final lightTheme = ThemeData(
+    //opposite
     primaryColor: Colors.white,
-    canvasColor: Color(0xFF413A6C),
-    iconTheme: IconThemeData(
-      color: Color(0xFF413A6C)
-    )
+    primaryColorLight: maincolor,
+
+    //samebothside
+    primaryColorDark: Colors.white,
+    secondaryHeaderColor: maincolor,
+   //themchanger
+    canvasColor: maincolor,
+    //background color
+    focusColor: Color(0xFFF5E5EE),
+    hintColor: Color.fromARGB(255, 183, 41, 205),
+    // splashColor: Color.fromARGB(255, 104, 48, 113),
   );
 
-// Define custom colors for dark mode
-  final darkTheme = ThemeData(
-    primaryColor: Color(0xFF413A6C),
-    canvasColor: Colors.black,
-    iconTheme: IconThemeData(
-      color: Colors.white
-    )
-  );
-  
+
 }
 
 class DarkMode with ChangeNotifier {
